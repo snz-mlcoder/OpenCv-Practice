@@ -10,6 +10,7 @@ Each script focuses on a specific concept or technique such as filtering, edge d
 |---|-------|-------------|
 | 01 | `01-basic-filters.py` | Applies identity, 3x3 average, and 5x5 average filters to an image using OpenCV and displays results with matplotlib. |
 | 02 | `02_edge_sobel_laplacian.py` | Applies Sobel (x and y) and Laplacian filters to detect edges, shown in a 2x2 matplotlib grid. |
+| 03 | `03_edge_canny.py`          | Uses the Canny edge detector with adjustable thresholds on a detailed image to highlight strong and weak edges. |
 
 | ... | ... | ... |
 
