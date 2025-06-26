@@ -15,6 +15,7 @@ Each script focuses on a specific concept or technique such as filtering, edge d
 | 05 | `05_filter_emboss.py` | Applies embossing filters in different directions (South West, South East, North West) and shifts the intensity for visualization. |
 | 06 | `06_morphology_erosion_dilation.py` | Demonstrates erosion and dilation on binary text image using a 5x5 kernel. Useful for shrinking or expanding foreground pixels. |
 | 07 | `07_filter_vignette_interactive.py` | Interactive vignette filter using a trackbar to adjust Gaussian sigma in real-time. |
+| 08 | `08_filter_vignette_shifted.py` | Applies a vignette effect with a shifted center, simulating off-center focus using cropped Gaussian mask. |
 
 | ... | ... | ... |
 
