@@ -20,6 +20,7 @@ Each script focuses on a specific concept or technique such as filtering, edge d
 | 10 | `10_webcam_color_space_switch.py` | Captures webcam feed and switches color spaces (Grayscale, YUV, HSV) interactively using keyboard keys. |
 | 11 | `11_mouse_quadrant_highlight.py` | Detects mouse click on an image and highlights the clicked quadrant (top-left, top-right, bottom-left, bottom-right). |
 | 12 | `12_webcam_negative_roi.py` | Live webcam stream where user can select a region with the mouse, and apply a "negative film" effect to the selected ROI. |
+| 13 | `13_webcam_cartoonize.py` | Converts live webcam stream to cartoon-style or sketch-style using Laplacian edge detection and bilateral filtering. Use keys: 's' for sketch, 'c' for color, ESC to exit. |
 
 | ... | ... | ... |
 
