@@ -18,6 +18,7 @@ Each script focuses on a specific concept or technique such as filtering, edge d
 | 08 | `08_filter_vignette_shifted.py` | Applies a vignette effect with a shifted center, simulating off-center focus using cropped Gaussian mask. |
 | 09 | `09_histogram_equalization_color.py` | Improves contrast of a color image by applying histogram equalization on the Y channel in YUV color space. |
 | 10 | `10_webcam_color_space_switch.py` | Captures webcam feed and switches color spaces (Grayscale, YUV, HSV) interactively using keyboard keys. |
+| 11 | `11_mouse_quadrant_highlight.py` | Detects mouse click on an image and highlights the clicked quadrant (top-left, top-right, bottom-left, bottom-right). |
 
 | ... | ... | ... |
 
