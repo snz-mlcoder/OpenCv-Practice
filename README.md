@@ -24,6 +24,7 @@ Each script focuses on a specific concept or technique such as filtering, edge d
 | 14 | `14_filter_comparison.py` | Compare Gaussian Blur and Bilateral Filter on an image. Shows side-by-side differences in edge preservation and smoothing. |
 | 15 | `15_face_detection.py` | Real-time face detection using Haar Cascade and webcam. Automatically counts and saves detected faces. Press ESC to exit. |
 | 16 | `16_prepare_masks.py` | Batch process all mask images starting with `16_` to remove background and save clean versions for face overlay. |
+| 17 | `17_face_mask_overlay.py` | Real-time face mask overlay using Haar Cascade. Allows manual position adjustment using arrow keys (WASD). |
 
 | ... | ... | ... |
 
