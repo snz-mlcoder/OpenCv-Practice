@@ -22,7 +22,7 @@ Each script focuses on a specific concept or technique such as filtering, edge d
 | 12 | `12_webcam_negative_roi.py` | Live webcam stream where user can select a region with the mouse, and apply a "negative film" effect to the selected ROI. |
 | 13 | `13_webcam_cartoonize.py` | Converts live webcam stream to cartoon-style or sketch-style using Laplacian edge detection and bilateral filtering. Use keys: 's' for sketch, 'c' for color, ESC to exit. |
 | 14 | `14_filter_comparison.py` | Compare Gaussian Blur and Bilateral Filter on an image. Shows side-by-side differences in edge preservation and smoothing. |
-| 15 | `15_face_detection.py` | Real-time face detection using Haar Cascade and webcam. Press ESC to exit. |
+| 15 | `15_face_detection.py` | Real-time face detection using Haar Cascade and webcam. Automatically counts and saves detected faces. Press ESC to exit. |
 
 | ... | ... | ... |
 

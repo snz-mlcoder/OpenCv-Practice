@@ -1,5 +1,5 @@
 import cv2
-
+import os
 # Load the Haar Cascade for face detection
 face_cascade = cv2.CascadeClassifier(cv2.data.haarcascades + 'haarcascade_frontalface_alt.xml')
 
@@ -9,6 +9,10 @@ if not cap.isOpened():
     raise IOError("Cannot open webcam")
 
 scaling_factor = 0.5  # Scale down for performance
+save_counter = 0
+
+# Folder to save faces
+os.makedirs("faces", exist_ok=True)
 
 while True:
     ret, frame = cap.read()
@@ -25,8 +29,16 @@ while True:
     for (x, y, w, h) in face_rects:
         cv2.rectangle(frame, (x, y), (x + w, y + h), (0, 255, 0), 2)
 
+        # Save faces on 's' key press
+        if cv2.waitKey(1) & 0xFF == ord('s'):
+            face_img = frame[y:y+h, x:x+w]
+            face_path = f"faces/face_{save_counter}.png"
+            cv2.imwrite(face_path, face_img)
+            save_counter += 1
+
     # Add info text
-    info_text = "ESC: Exit"
+    info_text = f"Faces: {len(face_rects)} | Press 's' to save, ESC to exit"
+
     cv2.putText(frame, info_text, (10, frame.shape[0] - 10),
                 cv2.FONT_HERSHEY_SIMPLEX, 0.5, (255, 255, 255), 1, cv2.LINE_AA)
 
