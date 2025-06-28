@@ -6,10 +6,21 @@ face_cascade = cv2.CascadeClassifier(cv2.data.haarcascades + 'haarcascade_fronta
 if face_cascade.empty():
     raise IOError('Failed to load Haar cascade')
 
-# Load your mask
-face_mask = cv2.imread(r'img\16_maskera_clean.png')
-if face_mask is None:
-    raise IOError('Failed to load mask image')
+# List of masks
+mask_paths = [
+    r'img\16_hannibal_mask_clean.png',
+    r'img\16_maskera_clean.png',
+    r'img\16_maskera2_clean.png'
+]
+current_mask_index = 0
+
+def load_mask(index):
+    mask = cv2.imread(mask_paths[index])
+    if mask is None:
+        raise IOError(f'Failed to load mask: {mask_paths[index]}')
+    return mask
+
+face_mask = load_mask(current_mask_index)
 
 # Webcam setup
 cap = cv2.VideoCapture(0)
@@ -54,7 +65,7 @@ while True:
         combined = cv2.add(masked_face, masked_frame)
         frame[y_new:y_new + h_new, x_new:x_new + w_new] = combined
 
-    cv2.imshow('Mask Overlay (Use arrow keys to adjust (WASD))', frame)
+    cv2.imshow('Mask Overlay (Use 1/2/3 to switch mask, WASD to move)', frame)
 
     key = cv2.waitKey(1) & 0xFF
     if key == 27:  # ESC to quit
@@ -67,6 +78,13 @@ while True:
         offset_x -= 5
     elif key == ord('d') or key == 83:  # right arrow or D
         offset_x += 5
+    elif key in [ord('1'), ord('2'), ord('3')]:
+        index = int(chr(key)) - 1
+        if 0 <= index < len(mask_paths):
+            current_mask_index = index
+            face_mask = load_mask(current_mask_index)
+            print(f"Switched to mask {index + 1}: {mask_paths[index]}")
+
 
 cap.release()
 cv2.destroyAllWindows()
