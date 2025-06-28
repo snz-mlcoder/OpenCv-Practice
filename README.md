@@ -26,6 +26,7 @@ Each script focuses on a specific concept or technique such as filtering, edge d
 | 16 | `16_prepare_masks.py` | Batch process all mask images starting with `16_` to remove background and save clean versions for face overlay. |
 | 17 | `17_face_mask_overlay.py` | Real-time face mask overlay using Haar Cascade. Switch masks with keys (1/2/3) and adjust position using arrow keys (WASD). |
 | 18 | `18_eye_detector.py | Real-time eye detection using Haar cascades. Draws green circles around detected eyes in the webcam feed. |
+| 19 | `19_face_sunglasses_overlay.py` | Adds sunglasses to a face image using Haar cascades (face + eye). Includes matplotlib comparison plot. |
 
 
 | ... | ... | ... |
