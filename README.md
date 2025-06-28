@@ -27,6 +27,7 @@ Each script focuses on a specific concept or technique such as filtering, edge d
 | 17 | `17_face_mask_overlay.py` | Real-time face mask overlay using Haar Cascade. Switch masks with keys (1/2/3) and adjust position using arrow keys (WASD). |
 | 18 | `18_eye_detector.py | Real-time eye detection using Haar cascades. Draws green circles around detected eyes in the webcam feed. |
 | 19 | `19_face_sunglasses_overlay.py` | Adds sunglasses to a face image using Haar cascades (face + eye). Includes matplotlib comparison plot. |
+| 20 | `20_face_parts_detection.py` | Real-time detection of face parts (eyes, nose, mouth) using Haar Cascades and webcam. Results are shown live with rectangles on each detected part. |
 
 
 | ... | ... | ... |
